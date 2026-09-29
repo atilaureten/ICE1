@@ -45,7 +45,7 @@ public class CardTrick {
         for (int i=0;i<magicHand.length; i++){
             
             //Integer magicValue = magicHand.getValue();
-            if (magicHand[i].getValue() == cc.getValue() && magicHand[i].getSuit().equals(cc.getSuit())){
+            if (magicHand[i].getValue() == luckyCard.getValue() && magicHand[i].getSuit().equals(luckyCard.getSuit())){
                     System.out.println("Congratulations, your card is in the magic hand");
             
                   }
