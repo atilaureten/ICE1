@@ -31,13 +31,17 @@ public class CardTrick {
             magicHand[i]=c;
             System.out.println(c.getValue() + " " + c.getSuit());
         }
-        System.out.print("Please provide card value(1-13): ");
-        Integer cardValue = k.nextInt();
-        System.out.print("Please provide card suit(0-3 where 0=hearts,1=Diamonds,2=Clubs,3=Spades)");
-        String cardSuit = k.next()  ;
-        Card cc=new Card();
-        cc.setValue(cardValue);
-        cc.setSuit(cardSuit);
+        Card luckyCard = new Card();
+        luckyCard.setValue(3);
+        luckyCard.setSuit(2);
+        
+        //System.out.print("Please provide card value(1-13): ");
+        //Integer cardValue = k.nextInt();
+        //System.out.print("Please provide card suit(0-3 where 0=hearts,1=Diamonds,2=Clubs,3=Spades)");
+        //String cardSuit = k.next()  ;
+        //Card cc=new Card();
+        //cc.setValue(cardValue);
+        //cc.setSuit(cardSuit);
         for (int i=0;i<magicHand.length; i++){
             
             //Integer magicValue = magicHand.getValue();
