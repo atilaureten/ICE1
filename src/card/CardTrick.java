@@ -10,19 +10,46 @@ package card;
  * for the match to the user's card. To be used as starting code in ICE 1
  * @author srinivsi
  */
+import java.util.Random;
+import java.util.Scanner;
 public class CardTrick {
     
     public static void main(String[] args)
     {
         Card[] magicHand = new Card[7];
+        Scanner k = new Scanner(System.in);
         
         for (int i=0; i<magicHand.length; i++)
         {
-            Card c = new Card();
-            //c.setValue(insert call to random number generator here)
-            //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
+            Card c = new Card(); //store card object
+            Random random = new Random();
+            Integer randomValue = random.nextInt(1, 13);
+            c.setValue(randomValue);
+            Integer randomSuit = random.nextInt(0, 3);
+            c.setSuit(Card.SUITS[randomSuit]);
+            magicHand[i]=c;
+            System.out.println(c.getValue() + " " + c.getSuit());
+        }
+        System.out.print("Please provide card value(1-13): ");
+        Integer cardValue = k.nextInt();
+        System.out.print("Please provide card suit(0-3 where 0=hearts,1=Diamonds,2=Clubs,3=Spades)");
+        String cardSuit = k.next()  ;
+        Card cc=new Card();
+        cc.setValue(cardValue);
+        cc.setSuit(cardSuit);
+        for (int i=0;i<magicHand.length; i++){
+            
+            //Integer magicValue = magicHand.getValue();
+            if (magicHand[i].getValue() == cc.getValue() && magicHand[i].getSuit().equals(cc.getSuit())){
+                    System.out.println("Congratulations, your card is in the magic hand");
+            
+                  }
+            else {
+                System.out.println("Sorry your card is not in the magic hand");
+            }
         }
         
+       k.close();
         //insert code to ask the user for Card value and suit, create their card
         // and search magicHand here
         //Then report the result here
