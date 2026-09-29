@@ -33,7 +33,7 @@ public class CardTrick {
         }
         Card luckyCard = new Card();
         luckyCard.setValue(3);
-        luckyCard.setSuit(2);
+        luckyCard.setSuit("2");
         
         //System.out.print("Please provide card value(1-13): ");
         //Integer cardValue = k.nextInt();
