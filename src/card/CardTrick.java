@@ -9,6 +9,7 @@ package card;
  * and then asks the user to pick a card and searches the array of cards
  * for the match to the user's card. To be used as starting code in ICE 1
  * @author srinivsi
+ * @Modifier Atila Ureten 991850506
  */
 import java.util.Random;
 import java.util.Scanner;
